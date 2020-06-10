@@ -2,7 +2,9 @@ import * as React from 'react'
 import { View } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import AddEntry from './components/AddEntry'
-
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducer from './reducers'
 
 const instructions = Platform.select({
   ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
@@ -11,9 +13,10 @@ const instructions = Platform.select({
 
 export default function App() {
   return (
-    <View>
-      <AddEntry/>
-
-    </View>
+    <Provider store={createStore(reducer)}>
+      <View>
+        <AddEntry/>
+      </View>
+    </Provider>
   );
 }

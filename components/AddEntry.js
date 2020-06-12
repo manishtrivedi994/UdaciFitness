@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
         height: 45,
         paddingLeft: 30,
         paddingRight: 30,
-        alignSelf: 'flex-end',
+        alignSelf: 'center',
         justifyContent: 'center',
     },
     SubmitBtnText: {
